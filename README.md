@@ -1,10 +1,17 @@
-# automatic-free-badges
-Instructions:
+# Python Instructions
+
 Note: For your .ROBLOSECURITY cookie if you use third-party hosting platforms I strongly recommend using an alt with team create!
 
 1. Install the library `requests` (pip install requests or pip3 install requests, and make sure you have python installed!)
 2. Open config.py. From here, in `cookie` input your .ROBLOSECURITY cookie (search a tutorial for your browser if you don't know how or use EditThisCookie), in `universeid` input the universeId for the place you will add badges to (get from the creator page URL for the universe page), and `badgename` and `badgedescription` to whatever you want. Oh, and replace `download.png` with your desired image file. You probably won't like my terrible artwork.
 3. Run `main.py`. Make sure you can run this script 24/7.
+
+# Game Instructions
+
+1. Put a BadgeAwarder (I strongly recommend using Inkthirsty's as that's what this code was made for, https://create.roblox.com/marketplace/asset/6647379227/Better-Badge-Giver) and put it in ReplicatedStorage. If you are using Inkthirsty's, input `repeat task.wait(.1) until script.Parent.Parent == game.Workspace` into the script called `Decal`.
+2. Copy the code from `game.lua` into a script inside ServerScriptService.
+3. In lines 40 and 41, replace `pos` and `pos2` with your desired BadgeAwarder spawn coordinates. (Playtest first).
+4. You're done!
 
 # Error codes
 If you don't get status code 200 everytime, refer to this.
