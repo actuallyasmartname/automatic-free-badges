@@ -10,8 +10,13 @@ Note: For your .ROBLOSECURITY cookie if you use third-party hosting platforms I 
 If you don't get status code 200 everytime, refer to this.
 
 401 - Your cookie is invalid. Make sure it has no spaces or line breaks and you are accessing the cookie from the IP the account was logged in from.
+
 403 - You cannot manage the game you are trying to access.
+
 400 - Usually occurs when you have an invalid badge name.
+
 500 - Something's wrong with Roblox; this is not your fault.
+
 429 - Too many requests. Make sure you aren't making lots of requests to Roblox.
+
 404 - Really rare occasions when the code is probably obsolete. Open an issue if you get this; this is most likely my bad coding.
