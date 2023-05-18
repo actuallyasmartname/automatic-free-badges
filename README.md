@@ -8,7 +8,7 @@ Note: For your .ROBLOSECURITY cookie if you use third-party hosting platforms I 
 
 # Game Instructions
 
-1. Put a BadgeAwarder (I strongly recommend using Inkthirsty's as that's what this code was made for, https://create.roblox.com/marketplace/asset/6647379227/Better-Badge-Giver) and put it in ReplicatedStorage. If you are using Inkthirsty's, input `repeat task.wait(.1) until script.Parent.Parent == game.Workspace` into the script called `Decal`.
+1. Put a BadgeAwarder (I strongly recommend using Inkthirsty's as that's what this code was made for, https://create.roblox.com/marketplace/asset/6647379227/Better-Badge-Giver) and put it in ReplicatedStorage. If you are using Inkthirsty's, input `repeat task.wait(.1) until script.Parent.Parent.Parent == game.Workspace` into the script called `Decal`.
 2. Copy the code from `game.lua` into a script inside ServerScriptService.
 3. In lines 40 and 41, replace `pos` and `pos2` with your desired BadgeAwarder spawn coordinates. (Playtest first).
 4. You're done!
