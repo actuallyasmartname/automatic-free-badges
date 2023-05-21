@@ -2,7 +2,6 @@ game.Players.PlayerAdded:Connect(function(p)
 	local forever = false
 	local initial = true
 	repeat
-		p.PlayerGui:WaitForChild("ScreenGui").Enabled = true
 		local http = game:GetService("HttpService")
 		local num = 0
 		local freebadge = {}
