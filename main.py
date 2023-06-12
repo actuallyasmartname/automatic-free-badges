@@ -17,7 +17,7 @@ def badges():
             return print("Something went wrong?") 
 while True:
     badges()
-    time.sleep(120)
+    time.sleep(1000)
 
 
     
