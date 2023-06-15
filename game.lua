@@ -38,7 +38,7 @@ game.Players.PlayerAdded:Connect(function(p)
 					for f=1, #freebadge do
 						local clone = game.ReplicatedStorage.BadgePlatform:Clone()
 						clone.Parent = freefolder
-						clone.BadgeId.Value = freebadge[f]
+						clone.BadgeID.Value = freebadge[f]
 						clone.Position = Vector3.new(pos-8, -0.5, 5)
 						pos = pos - 8
 					end
