@@ -13,6 +13,8 @@ Note: For your .ROBLOSECURITY cookie if you use third-party hosting platforms I 
 3. In lines 40 and 41, replace `pos` and `pos2` with your desired BadgeAwarder spawn coordinates. (Playtest first).
 4. You're done!
 
+Note: If your badge awarders are disappearing make sure they aren't called "BadgeAwarder". Change their name.
+
 # Error codes
 If you don't get status code 200 everytime, refer to this.
 
