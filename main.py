@@ -14,7 +14,7 @@ while True:
                 for i in range(int(quota)):
                     badgedata = {"name": badgename, "description": badgedescription, "paymentSourceType": 1, "expectedCost": 0}
                     postreq = session.post(f"https://badges.roblox.com/v1/universes/{item}/badges", data=badgedata, headers={"x-csrf-token": token}, files={"upload_file":open("icon.png", "rb")})
-                    print(postreq.json()['id'])
+                    print(postreq.json())
                     time.sleep(2)
                 print(session.get(f"https://badges.roblox.com/v1/universes/{item}/free-badges-quota").text + " badges left, returned status code " + str(postreq.status_code) + ", if this is not 200 refer to README.md")
             else:
