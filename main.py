@@ -26,7 +26,7 @@ def loop(universe):
                             print(f"{postreq.json()['errors'][0]['id']}, retrying")
                             loop(universe)
                             return
-                        time.sleep(1)
+                        time.sleep(5)
                     print(session.get(f"https://badges.roblox.com/v1/universes/{universe}/free-badges-quota").text + " badges left, returned status code " + str(postreq.status_code) + ", if this is not 200 refer to README.md")
                 else:
                     print("Something went wrong? (retrying in 10 min)") 
