@@ -18,7 +18,7 @@ def loop(universe):
                         badgedata = {"name": badgename, "description": badgedescription, "paymentSourceType": 1, "expectedCost": 0}
                         postreq = session.post(f"https://badges.roblox.com/v1/universes/{universe}/badges", data=badgedata, headers={"x-csrf-token": token}, files={"upload_file":open("icon.png", "rb")})
                         try:
-                            print(postreq.json()['id'])
+                            print(postreq.json())
                         except KeyError or IndexError:
                             if postreq.json()['errors'][0]['code'] == 12:
                                 print("You cannot create badges for this universe. Please change your config.py (make sure it's universeId)")
