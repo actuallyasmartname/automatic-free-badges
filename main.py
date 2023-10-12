@@ -4,7 +4,7 @@ err = False
 def loop(universe):
     while True:
             print(f"Creating badges for GameID {universe}")
-            with requests.session() as session:
+            with requests.sessions.Session() as session:
                 quota = session.get(f"https://badges.roblox.com/v1/universes/{universe}/free-badges-quota").text
                 print(quota)
                 if int(quota) == 0:
