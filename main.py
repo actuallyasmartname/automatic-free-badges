@@ -15,7 +15,7 @@ def loop(universe):
                     header = session.post("https://auth.roblox.com")
                     token = session.headers["X-CSRF-TOKEN"] = header.headers["X-CSRF-TOKEN"]
                     for i in range(int(limit)):
-                        badgedata = {"name": badgename, "description": badgedescription, "paymentSourceType": 1, "expectedCost": 0}
+                        badgedata = {"name": badgename, "description": badgedescription, "paymentSourceType": 1, "expectedCost": 100} # disclaimer: i am not liable for any lost robux. by using this program you agree not to bug me about it
                         postreq = session.post(f"https://badges.roblox.com/v1/universes/{universe}/badges", data=badgedata, headers={"x-csrf-token": token}, files={"upload_file":open("icon.png", "rb")})
                         try:
                             print(postreq.json())
