@@ -1,5 +1,5 @@
 import requests, time
-from config import cookie,universeid,badgedescription,badgename,valuable,limit
+from config import cookie,universeid,badgedescription,badgename,valuable,limit,timediff
 err = False
 def loop(universe):
     while True:
@@ -26,7 +26,7 @@ def loop(universe):
                             print(f"{postreq.json()['errors'][0]['id']}, retrying")
                             loop(universe)
                             return
-                        time.sleep(5)
+                        time.sleep(timediff)
                     print('Successfully added valuables')
                     break
                 if int(quota) > 0:
@@ -45,7 +45,7 @@ def loop(universe):
                             print(f"{postreq.json()['errors'][0]['id']}, retrying")
                             loop(universe)
                             return
-                        time.sleep(5)
+                        time.sleep(timediff)
                     print(session.get(f"https://badges.roblox.com/v1/universes/{universe}/free-badges-quota").text + " badges left, returned status code " + str(postreq.status_code) + ", if this is not 200 refer to README.md")
                 else:
                     print("Something went wrong? (retrying in 10 min)") 
