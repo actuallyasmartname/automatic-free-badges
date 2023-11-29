@@ -26,6 +26,6 @@ If you don't get status code 200 everytime, refer to this.
 
 500 - Something's wrong with Roblox; this is not your fault.
 
-429 - Too many requests. Make sure you aren't making lots of requests to Roblox.
+429 - Too many requests. Make sure you aren't making lots of requests to Roblox. If you get this a lot change `timediff` in config.py to a higher number.
 
 404 - Really rare occasions when the code is probably obsolete. Open an issue if you get this; this is most likely my bad coding.
