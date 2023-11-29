@@ -28,6 +28,7 @@ def loop(universe):
                             return
                         time.sleep(5)
                     print('Successfully added valuables')
+                    break
                 if int(quota) > 0:
                     session.cookies.set(".ROBLOSECURITY", cookie)
                     header = session.post("https://auth.roblox.com")
