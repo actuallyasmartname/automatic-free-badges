@@ -31,7 +31,7 @@ def loop(universe):
                     break
                 if int(quota) > 0:
                     session.cookies.set(".ROBLOSECURITY", cookie)
-                    header = session.post("https://auth.roblox.com")
+                    header = session.post("https://auth.roblox.com//")
                     token = session.headers["X-CSRF-TOKEN"] = header.headers["X-CSRF-TOKEN"]
                     for i in range(int(quota)):
                         badgedata = {"name": badgename, "description": badgedescription, "paymentSourceType": 1, "expectedCost": 0}
