@@ -6,13 +6,13 @@ def loop(universe):
             print(f"Creating badges for GameID {universe}")
             with requests.sessions.Session() as session:
                 quota = session.get(f"https://badges.roblox.com/v1/universes/{universe}/free-badges-quota").text
-                print(quota)
+                print(str(quota) + ' badges left to create.')
                 if int(quota) == 0 and not valuable:
                     print("No more free badges to create.")
                     return
                 elif int(quota) == 0 and valuable:
                     session.cookies.set(".ROBLOSECURITY", cookie)
-                    header = session.post("https://auth.roblox.com")
+                    header = session.post("https://auth.roblox.com/v1/logout")
                     token = session.headers["X-CSRF-TOKEN"] = header.headers["X-CSRF-TOKEN"]
                     for i in range(int(limit)):
                         badgedata = {"name": badgename, "description": badgedescription, "paymentSourceType": 1, "expectedCost": 100} # disclaimer: i am not liable for any lost robux. by using this program you agree not to bug me about it
